@@ -1,5 +1,7 @@
 package dev.lpa;
 
+import java.util.concurrent.TimeUnit;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -25,6 +27,21 @@ public class Main {
 //        private tid int
         // run()
         // start()
+
+        CustomThread customThread = new CustomThread();
+        customThread.start();
+
+        for (int i=0; i<=3; i++){
+            System.out.println(" 0 ");
+            try{
+                // sleep 1sec
+                TimeUnit.SECONDS.sleep(1);
+            }
+            catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        }
+
 
     }
 
